@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="channeladvisor-rest-wrapper",
+    name="channelrest",
     version="0.0.1",
     author="Josh P. Sawyer",
     author_email="josh@joshpsawyer.com",
@@ -14,7 +14,7 @@ setuptools.setup(
     description="Python wrapper for Channel Advisor REST Api",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/wildland-creative/channeladvisor-rest-wrapper",
+    url="https://github.com/wildland-creative/channelrest",
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
