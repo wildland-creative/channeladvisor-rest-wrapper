@@ -154,9 +154,10 @@ class ChannelAdvisor:
             data_out = response.json()
 
             if response.status_code >= 200 and response.status_code <= 299:     # OK
+                return data_out
+            else:
                 raise Exception({response.status_code, data_out["Message"]})
             
-            return data_out
         except requests.exceptions.RequestException as e:
             self._logger.error(msg=(str(e)))
 

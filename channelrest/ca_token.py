@@ -45,8 +45,8 @@ class ChannelAdvisorToken:
         if path.exists(self.cache_file):
             with open(self.cache_file, "r") as infile:
                 token_data = json.load(infile)
-            print(int(datetime.datetime.now(datetime.timezone.utc).timestamp()))
-            print(token_data['expiration_date'])
+            # print(int(datetime.datetime.now(datetime.timezone.utc).timestamp()))
+            # print(token_data['expiration_date'])
             if int(datetime.datetime.now(datetime.timezone.utc).timestamp()) > token_data['expiration_date']:
                 #Token expired, get new
                 token_data = self.refresh_token()
